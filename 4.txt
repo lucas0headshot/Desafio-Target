@@ -1,0 +1,31 @@
+Dois veículos (um carro e um caminhão) saem respectivamente de cidades opostas pela mesma rodovia. 
+O carro de Ribeirão Preto em direção a Franca, a uma velocidade constante de 110 km/h e o caminhão de Franca em direção a Ribeirão Preto a uma velocidade constante de 80 km/h. 
+Quando eles se cruzarem na rodovia, qual estará mais próximo a cidade de Ribeirão Preto?
+
+IMPORTANTE:
+
+a) Considerar a distância de 100km entre a cidade de Ribeirão Preto <-> Franca.
+b) Considerar 2 pedágios como obstáculo e que o caminhão leva 5 minutos a mais para passar em cada um deles e o carro possui tag de pedágio (Sem Parar)
+c) Explique como chegou no resultado.
+
+
+Sabemos que a distância entre Ribeirão Preto e Franca é de 100 km. Para descobrir em que ponto da rodovia eles se encontram, precisamos calcular o tempo que cada um levou para percorrer a distância que percorreu.
+Podemos usar a fórmula: tempo = distância / velocidade. 
+Portanto, para o carro:
+tempo_carro = 100 km / 110 km/h
+tempo_carro = 0,91 horas
+
+Já para o caminhão, precisamos considerar que ele levará 5 minutos a mais para passar em cada pedágio:
+tempo_caminhão = (100 km / 80 km/h) + (5 min + 5 min) / 60 min
+tempo_caminhão = 1,35 horas
+
+Como os dois veículos se encontram no ponto médio entre Ribeirão Preto e Franca, podemos calcular a distância que cada um ainda precisa percorrer até chegar à Ribeirão Preto:
+distância_carro = 100 km / 2 - 100 km / 2 * (tempo_carro / (tempo_carro + tempo_caminhão))
+distância_carro = 50 km - 50 km * (0,91 / (0,91 + 1,35))
+distância_carro = 21,43 km
+
+distância_caminhão = 100 km / 2 - 100 km / 2 * (tempo_caminhão / (tempo_carro + tempo_caminhão))
+distância_caminhão = 50 km - 50 km * (1,35 / (0,91 + 1,35))
+distância_caminhão = 28,57 km
+
+Portanto, quando se encontrarem na rodovia, o carro estará mais próximo da cidade de Ribeirão Preto.
